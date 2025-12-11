@@ -71,7 +71,7 @@ export default function DashboardLayout({
                 Personal History
               </Link>
               <Link
-                href="#"
+                href="/dashboard/user/ai-help"
                 className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
               >
                 <Bot className="h-4 w-4" />
@@ -139,7 +139,7 @@ export default function DashboardLayout({
                   Personal History
                 </Link>
                 <Link
-                  href="#"
+                  href="/dashboard/user/ai-help"
                   className="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"
                 >
                   <Bot className="h-5 w-5" />
