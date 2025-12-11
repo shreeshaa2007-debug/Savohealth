@@ -29,7 +29,7 @@ export default function UserDashboard() {
                     <CardTitle className="text-xl">Quick Links</CardTitle>
                 </CardHeader>
                 <CardContent className="grid gap-4">
-                    <Link href="#" className="flex items-center space-x-4 p-2 rounded-lg hover:bg-muted">
+                    <Link href="/dashboard/user/personal-history" className="flex items-center space-x-4 p-2 rounded-lg hover:bg-muted">
                         <FileText className="h-6 w-6 text-primary" />
                         <div>
                             <p className="font-semibold">Personal History</p>

@@ -1,5 +1,8 @@
 
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import {
   Bell,
   CircleUser,
@@ -38,12 +41,25 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { cn } from '@/lib/utils';
+
 
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+
+  const navItems = [
+    { href: '/dashboard/user', icon: Home, label: 'Dashboard' },
+    { href: '/dashboard/user/personal-history', icon: FileText, label: 'Personal History' },
+    { href: '/dashboard/user/ai-help', icon: Bot, label: 'AI Help' },
+    { href: '#', icon: HeartPulse, label: 'Doctor Consultation' },
+    { href: '#', icon: Pill, label: 'Pharmacy' },
+    { href: '#', icon: Shield, label: 'Insurance' },
+  ];
+
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
       <div className="hidden border-r bg-muted/40 md:block">
@@ -56,48 +72,19 @@ export default function DashboardLayout({
           </div>
           <div className="flex-1">
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
-              <Link
-                href="/dashboard/user"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-              >
-                <Home className="h-4 w-4" />
-                Dashboard
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-              >
-                <FileText className="h-4 w-4" />
-                Personal History
-              </Link>
-              <Link
-                href="/dashboard/user/ai-help"
-                className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
-              >
-                <Bot className="h-4 w-4" />
-                AI Help
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-              >
-                <HeartPulse className="h-4 w-4" />
-                Doctor Consultation
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-              >
-                <Pill className="h-4 w-4" />
-                Pharmacy
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-              >
-                <Shield className="h-4 w-4" />
-                Insurance
-              </Link>
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary",
+                    pathname === item.href && "bg-muted text-primary"
+                  )}
+                >
+                  <item.icon className="h-4 w-4" />
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>
@@ -124,48 +111,19 @@ export default function DashboardLayout({
                   <Stethoscope className="h-6 w-6 text-primary" />
                   <span className="sr-only">SavoHealth</span>
                 </Link>
-                <Link
-                  href="/dashboard/user"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-                >
-                  <Home className="h-5 w-5" />
-                  Dashboard
-                </Link>
-                <Link
-                  href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-                >
-                  <FileText className="h-5 w-5" />
-                  Personal History
-                </Link>
-                <Link
-                  href="/dashboard/user/ai-help"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"
-                >
-                  <Bot className="h-5 w-5" />
-                  AI Help
-                </Link>
-                <Link
-                  href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-                >
-                  <HeartPulse className="h-5 w-5" />
-                  Doctor Consultation
-                </Link>
-                <Link
-                  href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-                >
-                  <Pill className="h-5 w-5" />
-                  Pharmacy
-                </Link>
-                <Link
-                  href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-                >
-                  <Shield className="h-5 w-5" />
-                  Insurance
-                </Link>
+                 {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={cn(
+                      "mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground",
+                      pathname === item.href && "bg-muted text-foreground"
+                    )}
+                  >
+                    <item.icon className="h-5 w-5" />
+                    {item.label}
+                  </Link>
+                ))}
               </nav>
             </SheetContent>
           </Sheet>

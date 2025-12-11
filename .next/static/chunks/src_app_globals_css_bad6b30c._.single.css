@@ -516,6 +516,10 @@ body {
   margin-top: 1rem;
 }
 
+.mt-1 {
+  margin-top: .25rem;
+}
+
 .flex {
   display: flex;
 }
@@ -878,6 +882,10 @@ body {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.bg-muted\/50 {
+  background-color: hsl(var(--muted) / .5);
+}
+
 .fill-current {
   fill: currentColor;
 }
@@ -904,6 +912,10 @@ body {
 
 .p-2 {
   padding: .5rem;
+}
+
+.p-3 {
+  padding: .75rem;
 }
 
 .px-2 {
@@ -1607,6 +1619,10 @@ body {
     grid-template-columns: 220px 1fr;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1614,6 +1630,10 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .lg\:h-\[60px\] {
     height: 60px;
   }
@@ -1624,6 +1644,10 @@ body {
 
   .lg\:grid-cols-\[280px_1fr\] {
     grid-template-columns: 280px 1fr;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:gap-6 {
