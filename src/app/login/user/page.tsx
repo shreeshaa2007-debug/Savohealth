@@ -14,9 +14,22 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Stethoscope, ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
+
 
 export default function UserAuthPage() {
   const [isLogin, setIsLogin] = useState(true);
+  const router = useRouter();
+
+  const handleLogin = () => {
+    // For now, just navigate to the dashboard
+    router.push('/dashboard/user');
+  }
+
+  const handleCreateAccount = () => {
+     // For now, just navigate to the onboarding page
+    router.push('/onboarding/user');
+  }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-background p-8">
@@ -56,7 +69,7 @@ export default function UserAuthPage() {
                   <Label htmlFor="password">Password</Label>
                   <Input id="password" type="password" required />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button onClick={handleLogin} className="w-full">
                   Login
                 </Button>
               </div>
@@ -94,7 +107,7 @@ export default function UserAuthPage() {
                   <Label htmlFor="password">Password</Label>
                   <Input id="password" type="password" required />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button onClick={handleCreateAccount} className="w-full">
                   Create Account
                 </Button>
               </div>
