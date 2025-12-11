@@ -772,6 +772,10 @@ body {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .gap-1 {
   gap: .25rem;
 }
@@ -1052,6 +1056,10 @@ body {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-2 {
+  padding-top: .5rem;
 }
 
 .text-left {
