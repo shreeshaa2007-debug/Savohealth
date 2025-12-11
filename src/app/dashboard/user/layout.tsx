@@ -55,9 +55,9 @@ export default function DashboardLayout({
     { href: '/dashboard/user', icon: Home, label: 'Dashboard' },
     { href: '/dashboard/user/personal-history', icon: FileText, label: 'Personal History' },
     { href: '/dashboard/user/ai-help', icon: Bot, label: 'AI Help' },
-    { href: '#', icon: HeartPulse, label: 'Doctor Consultation' },
-    { href: '#', icon: Pill, label: 'Pharmacy' },
-    { href: '#', icon: Shield, label: 'Insurance' },
+    { href: '/dashboard/user/doctor-consultation', icon: HeartPulse, label: 'Doctor Consultation' },
+    { href: '/dashboard/user/pharmacy', icon: Pill, label: 'Pharmacy' },
+    { href: '/dashboard/user/insurance', icon: Shield, label: 'Insurance' },
   ];
 
   return (
