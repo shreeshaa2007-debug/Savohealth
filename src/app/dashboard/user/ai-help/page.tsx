@@ -6,13 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Bot, AlertTriangle, Stethoscope } from "lucide-react";
+import { Bot, AlertTriangle, Stethoscope, Languages } from "lucide-react";
 import { symptomCheck, type SymptomCheckOutput } from "@/ai/flows/symptom-checker-flow";
 import { useToast } from "@/hooks/use-toast";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 
 export default function AiHelpPage() {
     const [symptoms, setSymptoms] = useState('');
+    const [language, setLanguage] = useState('English');
     const [response, setResponse] = useState<SymptomCheckOutput | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const { toast } = useToast();
@@ -24,7 +26,7 @@ export default function AiHelpPage() {
         setResponse(null);
 
         try {
-            const aiResponse = await symptomCheck({ symptoms });
+            const aiResponse = await symptomCheck({ symptoms, language });
             setResponse(aiResponse);
         } catch (error) {
             console.error("Error getting AI help:", error);
@@ -53,13 +55,26 @@ export default function AiHelpPage() {
 
     return (
         <div className="flex flex-col gap-6">
-            <div className="flex items-center">
+            <div className="flex items-center justify-between">
                 <h1 className="text-lg font-semibold md:text-2xl">AI Symptom Checker</h1>
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                        <Button variant="outline" className="flex items-center gap-2">
+                           <Languages className="h-4 w-4" />
+                           {language}
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        <DropdownMenuItem onClick={() => setLanguage('English')}>English</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setLanguage('Spanish')}>Español</DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => setLanguage('French')}>Français</DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
             </div>
             <Card>
                 <CardHeader>
                     <CardTitle>Describe Your Symptoms</CardTitle>
-                    <CardDescription>Enter your symptoms below, and our AI will provide a preliminary analysis and recommendation.</CardDescription>
+                    <CardDescription>Enter your symptoms below, and our AI will provide a preliminary analysis and recommendation in your selected language.</CardDescription>
                 </CardHeader>
                 <form onSubmit={handleSubmit}>
                     <CardContent>

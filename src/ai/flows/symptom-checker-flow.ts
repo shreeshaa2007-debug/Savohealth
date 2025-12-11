@@ -12,6 +12,7 @@ import { z } from 'zod';
 
 const SymptomCheckInputSchema = z.object({
   symptoms: z.string().describe('The symptoms described by the user.'),
+  language: z.string().describe('The language the user is communicating in (e.g., "English", "Spanish", "French").'),
 });
 export type SymptomCheckInput = z.infer<typeof SymptomCheckInputSchema>;
 
@@ -32,7 +33,9 @@ const prompt = ai.definePrompt({
     name: 'symptomCheckPrompt',
     input: { schema: SymptomCheckInputSchema },
     output: { schema: SymptomCheckOutputSchema },
-    prompt: `You are a helpful medical assistant AI. A user is providing their symptoms.
+    prompt: `You are a helpful medical assistant AI. A user is providing their symptoms in {{{language}}}. 
+    
+    Your entire response must be in {{{language}}}.
     
     Symptoms: {{{symptoms}}}
 
@@ -42,7 +45,7 @@ const prompt = ai.definePrompt({
     - If the symptoms are persistent or concerning (like a lasting fever), classify severity as "Moderate" and recommend consulting a doctor.
     - If the symptoms are critical (like chest pain or difficulty breathing), classify severity as "Severe" and strongly recommend visiting the nearest hospital or calling emergency services immediately.
 
-    Provide a concise and clear analysis.`,
+    Provide a concise and clear analysis in {{{language}}}.`,
 });
 
 const symptomCheckFlow = ai.defineFlow(
