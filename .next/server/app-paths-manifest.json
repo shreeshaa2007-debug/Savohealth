@@ -1,6 +1,8 @@
 {
+  "/dashboard/user/doctor-consultation/page": "app/dashboard/user/doctor-consultation/page.js",
   "/dashboard/user/page": "app/dashboard/user/page.js",
-  "/login/doctor/page": "app/login/doctor/page.js",
+  "/dashboard/user/personal-history/page": "app/dashboard/user/personal-history/page.js",
+  "/dashboard/user/pharmacy/page": "app/dashboard/user/pharmacy/page.js",
   "/login/user/page": "app/login/user/page.js",
   "/page": "app/page.js"
 }

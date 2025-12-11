@@ -19,7 +19,8 @@ import {
   Bot,
   Pill,
   Shield,
-  FileText
+  FileText,
+  AlarmClock
 } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
@@ -57,6 +58,7 @@ export default function DashboardLayout({
     { href: '/dashboard/user/ai-help', icon: Bot, label: 'AI Help' },
     { href: '/dashboard/user/doctor-consultation', icon: HeartPulse, label: 'Doctor Consultation' },
     { href: '/dashboard/user/pharmacy', icon: Pill, label: 'Pharmacy' },
+    { href: '/dashboard/user/reminders', icon: AlarmClock, label: 'Reminders' },
     { href: '/dashboard/user/insurance', icon: Shield, label: 'Insurance' },
   ];
 
