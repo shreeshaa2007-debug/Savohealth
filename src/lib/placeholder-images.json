@@ -25,28 +25,40 @@
       "imageHint": "male doctor pensive"
     },
     {
-      "id": "medicine1",
-      "description": "A bottle of pills.",
-      "imageUrl": "https://images.unsplash.com/photo-1573883431205-98b5f10aaedb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaWxscyUyMGJvdHRsZXxlbnwwfHx8fDE3NjU0NDAwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pills bottle"
+      "id": "paracetamol",
+      "description": "A box of paracetamol tablets.",
+      "imageUrl": "https://images.unsplash.com/photo-1631583177384-0a375a371395?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "paracetamol box"
     },
     {
-      "id": "medicine2",
-      "description": "A bottle of syrup.",
+      "id": "cough_syrup",
+      "description": "A bottle of cough syrup.",
       "imageUrl": "https://images.unsplash.com/photo-1628191010212-c2b644a497ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzeXJ1cCUyMGJvdHRsZXxlbnwwfHx8fDE3NjU0NDAwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "syrup bottle"
     },
     {
-      "id": "medicine3",
+      "id": "asthma_inhaler",
       "description": "An asthma inhaler.",
-      "imageUrl": "https://images.unsplash.com/photo-1628191010212-c2b644a497ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmhhbGVyfGVufDB8fHx8MTc2NTQ0MDA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "inhaler"
+      "imageUrl": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "asthma inhaler"
     },
     {
-      "id": "medicine4",
-      "description": "A tube of ointment.",
-      "imageUrl": "https://images.unsplash.com/photo-1628191010212-c2b644a497ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvaW50bWVudCUyMHR1YmV8ZW58MHx8fDE3NjU0NDAwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "antiseptic_ointment",
+      "description": "A tube of antiseptic ointment.",
+      "imageUrl": "https://images.unsplash.com/photo-1599428666347-5d3c45b778b4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "ointment tube"
+    },
+    {
+      "id": "ibuprofen",
+      "description": "A bottle of ibuprofen pills.",
+      "imageUrl": "https://images.unsplash.com/photo-1607513746974-53c7372c05e5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "ibuprofen bottle"
+    },
+    {
+      "id": "allergy_relief",
+      "description": "A box of allergy relief tablets.",
+      "imageUrl": "https://images.unsplash.com/photo-1547489432-49bab15c1b59?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "allergy pills"
     }
   ]
 }

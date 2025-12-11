@@ -14,42 +14,42 @@ const medicines = [
         name: 'Paracetamol 500mg',
         description: 'For relief of mild to moderate pain and fever.',
         price: '$5.99',
-        image: PlaceHolderImages.find(img => img.id === 'medicine1'),
+        image: PlaceHolderImages.find(img => img.id === 'paracetamol'),
     },
     {
         id: '2',
         name: 'Cough Syrup',
         description: 'Effective relief for dry and irritating coughs.',
         price: '$12.50',
-        image: PlaceHolderImages.find(img => img.id === 'medicine2'),
+        image: PlaceHolderImages.find(img => img.id === 'cough_syrup'),
     },
     {
         id: '3',
         name: 'Asthma Inhaler',
         description: 'For prevention and relief of bronchospasm.',
         price: '$45.00',
-        image: PlaceHolderImages.find(img => img.id === 'medicine3'),
+        image: PlaceHolderImages.find(img => img.id === 'asthma_inhaler'),
     },
     {
         id: '4',
         name: 'Antiseptic Ointment',
         description: 'Helps prevent infection in minor cuts and burns.',
         price: '$8.75',
-        image: PlaceHolderImages.find(img => img.id === 'medicine4'),
+        image: PlaceHolderImages.find(img => img.id === 'antiseptic_ointment'),
     },
     {
         id: '5',
         name: 'Ibuprofen 200mg',
         description: 'Reduces inflammation and treats pain.',
         price: '$7.20',
-        image: PlaceHolderImages.find(img => img.id === 'medicine1'),
+        image: PlaceHolderImages.find(img => img.id === 'ibuprofen'),
     },
     {
         id: '6',
         name: 'Allergy Relief Tablets',
         description: 'Provides relief from sneezing, and runny nose.',
         price: '$15.99',
-        image: PlaceHolderImages.find(img => img.id === 'medicine1'),
+        image: PlaceHolderImages.find(img => img.id === 'allergy_relief'),
     }
 ];
 
