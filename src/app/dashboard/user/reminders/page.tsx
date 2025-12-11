@@ -7,10 +7,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { AlarmClock, Bell, PlusCircle, Trash2 } from "lucide-react";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Calendar as CalendarIcon } from "lucide-react";
-import { format } from "date-fns";
 import { cn } from '@/lib/utils';
 
 
@@ -19,7 +15,7 @@ type Reminder = {
     medication: string;
     dosage: string;
     time: string;
-    date: Date;
+    date: string;
 }
 
 export default function RemindersPage() {
@@ -27,7 +23,7 @@ export default function RemindersPage() {
     const [medication, setMedication] = useState('');
     const [dosage, setDosage] = useState('');
     const [time, setTime] = useState('');
-    const [date, setDate] = useState<Date | undefined>(new Date());
+    const [date, setDate] = useState<string>(new Date().toISOString().split('T')[0]);
 
     const addReminder = () => {
         if (!medication || !time || !date) return;
@@ -47,6 +43,17 @@ export default function RemindersPage() {
     const deleteReminder = (id: number) => {
         setReminders(reminders.filter(r => r.id !== id));
     };
+
+    const formatDate = (dateString: string) => {
+        const date = new Date(dateString);
+        const userTimezoneOffset = date.getTimezoneOffset() * 60000;
+        return new Date(date.getTime() + userTimezoneOffset).toLocaleDateString(undefined, {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        });
+    }
 
   return (
     <div className="flex flex-col gap-6">
@@ -70,29 +77,8 @@ export default function RemindersPage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
-                        <Label htmlFor="date">Date</Label>
-                        <Popover>
-                            <PopoverTrigger asChild>
-                                <Button
-                                variant={"outline"}
-                                className={cn(
-                                    "w-full justify-start text-left font-normal",
-                                    !date && "text-muted-foreground"
-                                )}
-                                >
-                                <CalendarIcon className="mr-2 h-4 w-4" />
-                                {date ? format(date, "PPP") : <span>Pick a date</span>}
-                                </Button>
-                            </PopoverTrigger>
-                            <PopoverContent className="w-auto p-0">
-                                <Calendar
-                                mode="single"
-                                selected={date}
-                                onSelect={setDate}
-                                initialFocus
-                                />
-                            </PopoverContent>
-                        </Popover>
+                        <Label htmlFor="date-input">Date</Label>
+                        <Input id="date-input" type="date" value={date} onChange={e => setDate(e.target.value)} />
                     </div>
                      <div className="space-y-2">
                         <Label htmlFor="time">Time</Label>
@@ -119,7 +105,7 @@ export default function RemindersPage() {
                             <li key={reminder.id} className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
                                 <div>
                                     <p className="font-semibold">{reminder.medication} <span className="text-sm text-muted-foreground font-normal">{reminder.dosage}</span></p>
-                                    <p className="text-sm text-muted-foreground">{format(reminder.date, "PPP")} at {reminder.time}</p>
+                                    <p className="text-sm text-muted-foreground">{formatDate(reminder.date)} at {reminder.time}</p>
                                 </div>
                                 <Button variant="ghost" size="icon" onClick={() => deleteReminder(reminder.id)}>
                                     <Trash2 className="h-4 w-4 text-destructive" />

@@ -1,21 +1,5 @@
 {
-  "node": {
-    "40df5b2e355e7b48dc0727d440911d7d99ede66ec2": {
-      "workers": {
-        "app/dashboard/user/ai-help/page": {
-          "moduleId": "[project]/.next-internal/server/app/dashboard/user/ai-help/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/symptom-checker-flow.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "symptomCheck",
-          "filename": "src/ai/flows/symptom-checker-flow.ts"
-        }
-      },
-      "layer": {
-        "app/dashboard/user/ai-help/page": "action-browser"
-      },
-      "filename": "src/ai/flows/symptom-checker-flow.ts",
-      "exportedName": "symptomCheck"
-    }
-  },
+  "node": {},
   "edge": {},
   "encryptionKey": "V0MHWQ8y30+0AGugaaS9bbLZ0t841MSsh8lyopXnIwk="
 }
