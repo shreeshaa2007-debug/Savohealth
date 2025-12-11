@@ -20,6 +20,7 @@ import { useRouter } from 'next/navigation';
 export default function UserOnboardingPage() {
     const [height, setHeight] = useState('');
     const [weight, setWeight] = useState('');
+    const [age, setAge] = useState('');
     const [bmi, setBmi] = useState<number | null>(null);
     const router = useRouter();
 
@@ -45,15 +46,21 @@ export default function UserOnboardingPage() {
         <CardHeader>
           <CardTitle>Complete Your Health Profile</CardTitle>
           <CardDescription>
-            This information will help us calculate your BMI and personalize your experience.
+            This information will help us personalize your experience.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
+              <Label htmlFor="age">Your Age</Label>
+              <Input id="age" type="number" placeholder="e.g., 30" value={age} onChange={e => setAge(e.target.value)} />
+            </div>
+             <div className="space-y-2">
               <Label htmlFor="height">Height (cm)</Label>
               <Input id="height" type="number" placeholder="e.g., 175" value={height} onChange={e => setHeight(e.target.value)} onBlur={calculateBmi} />
             </div>
+          </div>
+           <div className="grid grid-cols-1">
             <div className="space-y-2">
               <Label htmlFor="weight">Weight (kg)</Label>
               <Input id="weight" type="number" placeholder="e.g., 70" value={weight} onChange={e => setWeight(e.target.value)} onBlur={calculateBmi}/>
