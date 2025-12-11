@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { PT_Sans } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
-import { DynamicBackground } from "@/components/dynamic-background";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const ptSans = PT_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"]
+});
 
 export const metadata: Metadata = {
-  title: "New App",
-  description: "A fresh start.",
+  title: "SavoHealth",
+  description: "Your partner in health.",
 };
 
 export default function RootLayout({
@@ -18,8 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <DynamicBackground>{children}</DynamicBackground>
+      <body className={ptSans.className}>
+        {children}
         <Toaster />
       </body>
     </html>
