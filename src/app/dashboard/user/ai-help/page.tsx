@@ -6,51 +6,39 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Bot, AlertTriangle, Stethoscope, User } from "lucide-react";
+import { Bot, AlertTriangle, Stethoscope } from "lucide-react";
+import { symptomCheck, type SymptomCheckOutput } from "@/ai/flows/symptom-checker-flow";
+import { useToast } from "@/hooks/use-toast";
 
-type AiResponse = {
-    diagnosis: string;
-    severity: 'Mild' | 'Moderate' | 'Severe';
-    recommendation: string;
-};
 
 export default function AiHelpPage() {
     const [symptoms, setSymptoms] = useState('');
-    const [response, setResponse] = useState<AiResponse | null>(null);
+    const [response, setResponse] = useState<SymptomCheckOutput | null>(null);
     const [isLoading, setIsLoading] = useState(false);
+    const { toast } = useToast();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!symptoms) return;
         setIsLoading(true);
-        // Simulate AI response
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        setResponse(null);
 
-        // Mock response based on keywords
-        if (symptoms.toLowerCase().includes('headache')) {
-             setResponse({
-                diagnosis: "Tension Headache",
-                severity: "Mild",
-                recommendation: "Rest, drink water, and consider over-the-counter pain relievers. If it persists or worsens, consult a doctor."
-            });
-        } else if (symptoms.toLowerCase().includes('chest pain')) {
-            setResponse({
-                diagnosis: "Potential Cardiac Event",
-                severity: "Severe",
-                recommendation: "This could be a medical emergency. Please visit the nearest hospital or call emergency services immediately."
-            });
-        } else {
-             setResponse({
-                diagnosis: "Common Cold",
-                severity: "Moderate",
-                recommendation: "Get plenty of rest, stay hydrated, and use over-the-counter cold remedies. A doctor consultation is recommended if symptoms don't improve in a week."
+        try {
+            const aiResponse = await symptomCheck({ symptoms });
+            setResponse(aiResponse);
+        } catch (error) {
+            console.error("Error getting AI help:", error);
+            toast({
+                variant: "destructive",
+                title: "Uh oh! Something went wrong.",
+                description: "There was a problem getting a response from the AI. Please try again later.",
             });
         }
        
         setIsLoading(false);
     };
 
-    const getSeverityIcon = (severity: AiResponse['severity']) => {
+    const getSeverityIcon = (severity: SymptomCheckOutput['severity']) => {
         switch (severity) {
             case 'Mild':
                 return <AlertTriangle className="h-4 w-4 text-yellow-500" />;
@@ -131,4 +119,3 @@ export default function AiHelpPage() {
         </div>
     );
 }
-
