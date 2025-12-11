@@ -1,0 +1,35 @@
+{
+  "node": {
+    "60fd2247c02c049cf71d8d5110bc1f23225c93cacb": {
+      "workers": {
+        "app/dashboard/ai-help/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/ai-help/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "checkSymptoms",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/ai-help/page": "action-browser"
+      },
+      "exportedName": "checkSymptoms",
+      "filename": "src/lib/actions.ts"
+    },
+    "60326d1b5853602c06568959d800fbe35a082a1e05": {
+      "workers": {
+        "app/dashboard/ai-help/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/ai-help/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "explainCureAction",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/ai-help/page": "action-browser"
+      },
+      "exportedName": "explainCureAction",
+      "filename": "src/lib/actions.ts"
+    }
+  },
+  "edge": {}
+}

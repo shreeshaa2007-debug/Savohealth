@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/user/studio/src/app/layout.tsx"],"sourcesContent":["// This is the root layout component for your Next.js app.\n// It applies to all routes.\n\nexport default function RootLayout({children}: {children: React.ReactNode}) {\n  return children;\n}\n"],"names":[],"mappings":"AAAA,0DAA0D;AAC1D,4BAA4B;;;;;AAEb,SAAS,WAAW,EAAC,QAAQ,EAA8B;IACxE,OAAO;AACT","debugId":null}}]
+}

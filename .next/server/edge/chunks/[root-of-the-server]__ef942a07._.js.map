@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/i18n.ts"],"sourcesContent":["import { getRequestConfig } from 'next-intl/server';\nimport { notFound } from 'next/navigation';\n\nexport const locales = ['en', 'ta'];\nexport const defaultLocale = 'en';\n\nexport default getRequestConfig(async ({ locale }) => {\n  if (!locales.includes(locale as any)) notFound();\n\n  return {\n    messages: (await import(`../messages/${locale}.json`)).default\n  };\n});\n"],"names":[],"mappings":";;;;;;;;AAAA;AACA;AAAA;;;AAEO,MAAM,UAAU;IAAC;IAAM;CAAK;AAC5B,MAAM,gBAAgB;uCAEd,IAAA,uQAAgB,EAAC,OAAO,EAAE,MAAM,EAAE;IAC/C,IAAI,CAAC,QAAQ,QAAQ,CAAC,SAAgB,IAAA,gNAAQ;IAE9C,OAAO;QACL,UAAU,CAAC;;;;;;;;;kBAAa,CAAC,YAAY,EAAE,OAAO,KAAK,CAAC,CAAC,EAAE,OAAO;IAChE;AACF"}},
+    {"offset": {"line": 59, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/middleware.ts"],"sourcesContent":["import createMiddleware from 'next-intl/middleware';\nimport { locales, defaultLocale } from './src/i18n';\n \nexport default createMiddleware({\n  locales,\n  defaultLocale\n});\n \nexport const config = {\n  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']\n};\n"],"names":[],"mappings":";;;;;;AAAA;AACA;;;uCAEe,IAAA,qKAAgB,EAAC;IAC9B,SAAA,8HAAO;IACP,eAAA,oIAAa;AACf;AAEO,MAAM,SAAS;IACpB,SAAS;QAAC;KAAoD;AAChE"}}]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 11, "column": 0}, "map": {"version":3,"sources":["file:///home/user/studio/src/app/page.tsx"],"sourcesContent":["import { redirect } from 'next/navigation';\nimport { defaultLocale } from './i18n';\n\n// This page only redirects to the default locale.\nexport default function RootPage() {\n  redirect(`/${defaultLocale}/dashboard`);\n}\n"],"names":[],"mappings":";;;;AAAA;AAAA;;;;;;;;AAIe,SAAS;IACtB,IAAA,iMAAQ,EAAC,CAAC,CAAC,EAAE,cAAc,UAAU,CAAC;AACxC","debugId":null}}]
+}

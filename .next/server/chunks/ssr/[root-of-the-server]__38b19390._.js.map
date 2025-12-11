@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///home/user/studio/src/app/page.tsx"],"sourcesContent":["import Link from \"next/link\";\n\nexport default function Home() {\n  return (\n    <main className=\"flex min-h-screen flex-col items-center justify-center p-24\">\n      <div className=\"text-center\">\n        <h1 className=\"text-4xl font-bold tracking-tight text-foreground sm:text-6xl\">\n          Welcome to Your New App\n        </h1>\n        <p className=\"mt-6 text-lg leading-8 text-muted-foreground\">\n          This is a clean slate. What would you like to build today?\n        </p>\n      </div>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAK,WAAU;kBACd,cAAA,8OAAC;YAAI,WAAU;;8BACb,8OAAC;oBAAG,WAAU;8BAAgE;;;;;;8BAG9E,8OAAC;oBAAE,WAAU;8BAA+C;;;;;;;;;;;;;;;;;AAMpE","debugId":null}}]
+}

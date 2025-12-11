@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///home/user/studio/i18n.ts"],"sourcesContent":["import {getRequestConfig} from 'next-intl/server';\nimport {notFound} from 'next/navigation';\n\n// Can be imported from a shared config\nexport const locales = ['en', 'ta'];\nexport const defaultLocale = 'en';\n\nexport default getRequestConfig(async ({locale}) => {\n  // Validate that the incoming `locale` parameter is valid\n  if (!locales.includes(locale as any)) notFound();\n\n  return {\n    messages: (await import(`./messages/${locale}.json`)).default\n  };\n});\n"],"names":[],"mappings":";;;;;;;;AAAA;AACA;AAAA;;;AAGO,MAAM,UAAU;IAAC;IAAM;CAAK;AAC5B,MAAM,gBAAgB;uCAEd,IAAA,+PAAgB,EAAC,OAAO,EAAC,MAAM,EAAC;IAC7C,yDAAyD;IACzD,IAAI,CAAC,QAAQ,QAAQ,CAAC,SAAgB,IAAA,iMAAQ;IAE9C,OAAO;QACL,UAAU,CAAC;;;;;;;;;kBAAa,CAAC,WAAW,EAAE,OAAO,KAAK,CAAC,CAAC,EAAE,OAAO;IAC/D;AACF","debugId":null}},
+    {"offset": {"line": 53, "column": 0}, "map": {"version":3,"sources":["file:///home/user/studio/src/app/page.tsx"],"sourcesContent":["import { redirect } from 'next/navigation';\nimport { defaultLocale } from '../../i18n';\n\n// This page only redirects to the default locale.\nexport default function RootPage() {\n  redirect(defaultLocale);\n}\n"],"names":[],"mappings":";;;;AAAA;AAAA;AACA;;;AAGe,SAAS;IACtB,IAAA,iMAAQ,EAAC,qHAAa;AACxB","debugId":null}}]
+}

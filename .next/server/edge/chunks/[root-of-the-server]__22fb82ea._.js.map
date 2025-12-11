@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/i18n.ts"],"sourcesContent":["import {getRequestConfig} from 'next-intl/server';\nimport {notFound} from 'next/navigation';\n\n// Can be imported from a shared config\nexport const locales = ['en', 'ta'];\nexport const defaultLocale = 'en';\n\nexport default getRequestConfig(async ({locale}) => {\n  // Validate that the incoming `locale` parameter is valid\n  if (!locales.includes(locale as any)) notFound();\n\n  return {\n    messages: (await import(`./messages/${locale}.json`)).default\n  };\n});\n"],"names":[],"mappings":";;;;;;;;;;;;;AACA;AAAA;;;AAGO,MAAM,UAAU;IAAC;IAAM;CAAK;AAC5B,MAAM,gBAAgB;uCAEd,iBAAiB,OAAO,EAAC,MAAM,EAAC;IAC7C,yDAAyD;IACzD,IAAI,CAAC,QAAQ,QAAQ,CAAC,SAAgB,IAAA,gNAAQ;IAE9C,OAAO;QACL,UAAU,CAAC;;;;;;;;;kBAAa,CAAC,WAAW,EAAE,OAAO,KAAK,CAAC,CAAC,EAAE,OAAO;IAC/D;AACF"}},
+    {"offset": {"line": 64, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/middleware.ts"],"sourcesContent":["import createMiddleware from 'next-intl/middleware';\nimport {locales, defaultLocale} from './i18n';\n\nexport default createMiddleware({\n  locales,\n  defaultLocale\n});\n\nexport const config = {\n  // Match only internationalized pathnames\n  matcher: ['/', '/(ta|en)/:path*']\n};\n"],"names":[],"mappings":";;;;;;;;;;;AACA;;;uCAEe,iBAAiB;IAC9B,SAAA,uHAAO;IACP,eAAA,6HAAa;AACf;AAEO,MAAM,SAAS;IACpB,yCAAyC;IACzC,SAAS;QAAC;QAAK;KAAkB;AACnC"}}]
+}

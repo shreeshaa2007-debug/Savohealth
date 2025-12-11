@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/navigation.ts"],"sourcesContent":["import {createLocalizedPathnamesNavigation} from 'next-intl/navigation';\n \nexport const locales = ['en', 'ta'] as const;\nexport const pathnames = {\n  '/': '/',\n  '/pathnames': {\n    en: '/pathnames',\n    ta: '/pfadnamen'\n  }\n};\n \nexport const {Link, redirect, usePathname, useRouter, getPathname} =\n  createLocalizedPathnamesNavigation({locales, pathnames});"],"names":[],"mappings":";;;;;;;;;;;;;;;;AAAA;;AAEO,MAAM,UAAU;IAAC;IAAM;CAAK;AAC5B,MAAM,YAAY;IACvB,KAAK;IACL,cAAc;QACZ,IAAI;QACJ,IAAI;IACN;AACF;AAEO,MAAM,EAAC,IAAI,EAAE,QAAQ,EAAE,WAAW,EAAE,SAAS,EAAE,WAAW,EAAC,GAChE,IAAA,iUAAkC,EAAC;IAAC;IAAS;AAAS"}},
+    {"offset": {"line": 53, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/middleware.ts"],"sourcesContent":["import createMiddleware from 'next-intl/middleware';\nimport {locales, pathnames} from './navigation';\n \nexport default createMiddleware({\n  defaultLocale: 'en',\n  locales,\n  pathnames\n});\n \nexport const config = {\n  // Match only internationalized pathnames\n  matcher: ['/', '/(ta|en)/:path*']\n};"],"names":[],"mappings":";;;;;;AAAA;AACA;;;uCAEe,IAAA,qKAAgB,EAAC;IAC9B,eAAe;IACf,SAAA,oIAAO;IACP,WAAA,sIAAS;AACX;AAEO,MAAM,SAAS;IACpB,yCAAyC;IACzC,SAAS;QAAC;QAAK;KAAkB;AACnC"}}]
+}
