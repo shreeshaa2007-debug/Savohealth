@@ -23,6 +23,30 @@
       "description": "A thoughtful portrait of a male neurologist.",
       "imageUrl": "https://images.unsplash.com/photo-1659353888096-cc5e333db5e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwZG9jdG9yJTIwcGVuc2l2ZXxlbnwwfHx8fDE3NjU0NDAwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "male doctor pensive"
+    },
+    {
+      "id": "medicine1",
+      "description": "A bottle of pills.",
+      "imageUrl": "https://images.unsplash.com/photo-1573883431205-98b5f10aaedb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaWxscyUyMGJvdHRsZXxlbnwwfHx8fDE3NjU0NDAwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pills bottle"
+    },
+    {
+      "id": "medicine2",
+      "description": "A bottle of syrup.",
+      "imageUrl": "https://images.unsplash.com/photo-1628191010212-c2b644a497ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzeXJ1cCUyMGJvdHRsZXxlbnwwfHx8fDE3NjU0NDAwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "syrup bottle"
+    },
+    {
+      "id": "medicine3",
+      "description": "An asthma inhaler.",
+      "imageUrl": "https://images.unsplash.com/photo-1628191010212-c2b644a497ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmhhbGVyfGVufDB8fHx8MTc2NTQ0MDA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "inhaler"
+    },
+    {
+      "id": "medicine4",
+      "description": "A tube of ointment.",
+      "imageUrl": "https://images.unsplash.com/photo-1628191010212-c2b644a497ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvaW50bWVudCUyMHR1YmV8ZW58MHx8fDE3NjU0NDAwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ointment tube"
     }
   ]
 }

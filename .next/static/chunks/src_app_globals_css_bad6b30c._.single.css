@@ -624,6 +624,10 @@ body {
   height: 1px;
 }
 
+.h-40 {
+  height: 10rem;
+}
+
 .max-h-screen {
   max-height: 100vh;
 }
@@ -706,6 +710,10 @@ body {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .flex-1 {
@@ -884,6 +892,11 @@ body {
   border-radius: .75rem;
 }
 
+.rounded-t-lg {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
 .border {
   border-width: 1px;
 }
@@ -986,6 +999,10 @@ body {
 
 .fill-current {
   fill: currentColor;
+}
+
+.object-cover {
+  object-fit: cover;
 }
 
 .p-0 {
