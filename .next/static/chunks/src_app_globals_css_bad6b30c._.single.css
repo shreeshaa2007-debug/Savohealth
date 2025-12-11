@@ -508,16 +508,16 @@ body {
   margin-right: .5rem;
 }
 
+.mt-1 {
+  margin-top: .25rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mt-1 {
-  margin-top: .25rem;
 }
 
 .flex {
@@ -688,12 +688,12 @@ body {
   appearance: none;
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -870,6 +870,10 @@ body {
   background-color: hsl(var(--muted) / .4);
 }
 
+.bg-muted\/50 {
+  background-color: hsl(var(--muted) / .5);
+}
+
 .bg-popover {
   background-color: hsl(var(--popover));
 }
@@ -886,10 +890,6 @@ body {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.bg-muted\/50 {
-  background-color: hsl(var(--muted) / .5);
-}
-
 .fill-current {
   fill: currentColor;
 }
@@ -902,6 +902,14 @@ body {
   padding: .25rem;
 }
 
+.p-2 {
+  padding: .5rem;
+}
+
+.p-3 {
+  padding: .75rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -912,14 +920,6 @@ body {
 
 .p-8 {
   padding: 2rem;
-}
-
-.p-2 {
-  padding: .5rem;
-}
-
-.p-3 {
-  padding: .75rem;
 }
 
 .px-2 {
@@ -1001,14 +1001,14 @@ body {
   line-height: 1.25rem;
 }
 
-.text-xs {
-  font-size: .75rem;
-  line-height: 1rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: .75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -1265,6 +1265,10 @@ body {
   background-color: hsl(var(--destructive) / .9);
 }
 
+.hover\:bg-muted:hover {
+  background-color: hsl(var(--muted));
+}
+
 .hover\:bg-primary\/90:hover {
   background-color: hsl(var(--primary) / .9);
 }
@@ -1275,10 +1279,6 @@ body {
 
 .hover\:bg-secondary\/80:hover {
   background-color: hsl(var(--secondary) / .8);
-}
-
-.hover\:bg-muted:hover {
-  background-color: hsl(var(--muted));
 }
 
 .hover\:text-accent-foreground:hover {
@@ -1619,12 +1619,12 @@ body {
     max-width: 420px;
   }
 
-  .md\:grid-cols-\[220px_1fr\] {
-    grid-template-columns: 220px 1fr;
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-\[220px_1fr\] {
+    grid-template-columns: 220px 1fr;
   }
 
   .md\:text-2xl {
@@ -1646,12 +1646,12 @@ body {
     width: 33.3333%;
   }
 
-  .lg\:grid-cols-\[280px_1fr\] {
-    grid-template-columns: 280px 1fr;
-  }
-
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-\[280px_1fr\] {
+    grid-template-columns: 280px 1fr;
   }
 
   .lg\:gap-6 {
