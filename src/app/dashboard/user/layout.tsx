@@ -20,7 +20,8 @@ import {
   Pill,
   Shield,
   FileText,
-  AlarmClock
+  AlarmClock,
+  Star
 } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';

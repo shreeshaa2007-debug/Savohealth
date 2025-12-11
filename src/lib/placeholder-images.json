@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "doctor1",
+      "description": "A professional portrait of a female doctor.",
+      "imageUrl": "https://images.unsplash.com/photo-1638202993928-7267aad84c31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmZW1hbGUlMjBkb2N0b3J8ZW58MHx8fHwxNzY1MzUxMzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female doctor"
+    },
+    {
+      "id": "doctor2",
+      "description": "A professional portrait of a male doctor.",
+      "imageUrl": "https://images.unsplash.com/photo-1712215544003-af10130f8eb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZG9jdG9yfGVufDB8fHx8MTc2NTQyODc2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male doctor"
+    },
+    {
+      "id": "doctor3",
+      "description": "A friendly portrait of a female pediatrician.",
+      "imageUrl": "https://images.unsplash.com/photo-1734002886107-168181bcd6a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmZW1hbGUlMjBkb2N0b3IlMjBzbWlsaW5nfGVufDB8fHx8MTc2NTQ0MDA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female doctor smiling"
+    },
+    {
+      "id": "doctor4",
+      "description": "A thoughtful portrait of a male neurologist.",
+      "imageUrl": "https://images.unsplash.com/photo-1659353888096-cc5e333db5e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwZG9jdG9yJTIwcGVuc2l2ZXxlbnwwfHx8fDE3NjU0NDAwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male doctor pensive"
+    }
+  ]
 }

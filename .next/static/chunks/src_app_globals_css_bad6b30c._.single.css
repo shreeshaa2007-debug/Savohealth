@@ -712,6 +712,10 @@ body {
   flex-shrink: 0;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 .border-collapse {
   border-collapse: collapse;
 }
@@ -872,6 +876,10 @@ body {
   border-width: 1px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -906,6 +914,10 @@ body {
 
 .border-primary {
   border-color: hsl(var(--primary));
+}
+
+.border-primary\/20 {
+  border-color: hsl(var(--primary) / .2);
 }
 
 .bg-accent {
@@ -1812,6 +1824,12 @@ body {
   .lg\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
